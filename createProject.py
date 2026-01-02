@@ -7,6 +7,7 @@ load_dotenv()
 
 # Ensure the environment variable 'domain' is not None
 domain=os.environ.get("domain","")
+token=os.environ.get("token","")
 payload = {
     "token": "",
     "title": "유저이름으로 하면 좋을듯"
