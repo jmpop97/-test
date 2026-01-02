@@ -9,7 +9,7 @@ load_dotenv()
 domain=os.environ.get("domain","")
 token=os.environ.get("token","")
 payload = {
-    "token": "",
+    "token": token,
     "title": "유저이름으로 하면 좋을듯"
 }
 
