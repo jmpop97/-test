@@ -1,0 +1,23 @@
+from dotenv import load_dotenv
+import os
+import requests
+
+# Load environment variables from .env file
+load_dotenv()
+
+# Ensure the environment variable 'domain' is not None
+domain=os.environ.get("domain")
+payload = {
+    "token": "",
+    "title": "유저이름으로 하면 좋을듯"
+}
+
+# Make the POST request
+try:
+    response = requests.post(domain, json=payload)
+
+    # Print the response status and content
+    print("Status Code:", response.status_code)
+    print("Response:", response.json())
+except requests.exceptions.RequestException as e:
+    print("An error occurred:", e)
