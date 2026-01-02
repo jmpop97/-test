@@ -18,7 +18,7 @@ payload = {
     }
 
 # Make the POST request with files
-response = requests.post(domain + "/f/uploadImage", data=payload)
+response = requests.post(domain + "/f/textToImage", data=payload)
 
 # Print the response status and content
 print("Status Code:", response.status_code)
