@@ -14,7 +14,7 @@ payload = {
 }
 
 # Make the POST request
-response = requests.post(domain, json=payload)
+response = requests.get(domain+"/f/createProject")
 
 # Print the response status and content
 print("Status Code:", response.status_code)
